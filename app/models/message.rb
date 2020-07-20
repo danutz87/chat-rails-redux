@@ -2,12 +2,11 @@ class Message < ApplicationRecord
   belongs_to :user
   belongs_to :channel
 
-   validates :content, presence: true
+  validates :content, presence: true
 
   after_create :broadcast_message
 
   def as_json(options = {})
-
     nickname = user.nickname.nil? ? user.email.match(/[^@]+/)[0] : user.nickname
 
     {

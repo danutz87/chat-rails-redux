@@ -1,7 +1,8 @@
-Rails.application.routes.draw do
-  devise_for :users
 
-    namespace :api, defaults: { format: :json } do
+Rails.application.routes.draw do
+  devise_for :users, :controllers => { registrations: 'registrations' }
+
+  namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :channels, only: [] do
         resources :messages, only: [ :index, :create ]
@@ -11,5 +12,6 @@ Rails.application.routes.draw do
 
   resources :channels, only: [ :show ]
   root to: 'channels#show'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  mount ActionCable.server => "/cable"
 end

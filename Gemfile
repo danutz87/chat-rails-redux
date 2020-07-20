@@ -12,7 +12,7 @@ gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 4.0'
+gem 'webpacker', '~> 3.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -21,7 +21,6 @@ gem 'jbuilder', '~> 2.7'
 gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'bootstrap-sass'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -32,7 +31,11 @@ gem 'devise'
 gem 'jquery-rails'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
+gem 'bootstrap-sass'
 gem 'simple_form'
+gem 'faker'
+gem 'figaro'
+gem 'uglifier'
 group :development, :test do gem 'pry-byebug'
   gem 'pry-rails'
   gem 'dotenv-rails'

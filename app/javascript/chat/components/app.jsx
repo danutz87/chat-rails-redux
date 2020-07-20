@@ -2,7 +2,7 @@ import React from 'react';
 import ChannelList from '../containers/channel_list';
 import MessageList from '../containers/message_list';
 
-import logo from 'logo.svg';
+import logo from '../assets/images/logo.svg';
 
 const App = (props) => {
   return (
